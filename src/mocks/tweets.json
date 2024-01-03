@@ -1,0 +1,182 @@
+[
+  {
+    "created_at": "2022-01-03T12:34:56+0000",
+    "id": 1,
+    "text": "This is an example tweet! 2022",
+    "user": {
+      "id": 9876543210,
+      "screen_name": "example_user",
+      "name": "Example User"
+    },
+    "retweet_count": 10,
+    "favorite_count": 20,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "example"
+        },
+        {
+          "text": "twitter"
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "another_user",
+          "name": "Another User",
+          "id": 123456789
+        }
+      ],
+      "urls": [
+        {
+          "url": "https://example.com",
+          "expanded_url": "https://example.com",
+          "display_url": "example.com"
+        }
+      ]
+    }
+  },
+  {
+    "created_at": "2021-01-03T12:34:56+0000",
+    "id": 2,
+    "text": "This is an example tweet 2021!",
+    "user": {
+      "id": 9876543210,
+      "screen_name": "example_user",
+      "name": "Example User"
+    },
+    "retweet_count": 10,
+    "favorite_count": 20,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "example"
+        },
+        {
+          "text": "twitter"
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "another_user",
+          "name": "Another User",
+          "id": 123456789
+        }
+      ],
+      "urls": [
+        {
+          "url": "https://example.com",
+          "expanded_url": "https://example.com",
+          "display_url": "example.com"
+        }
+      ]
+    }
+  },
+  {
+    "created_at": "2021-01-03T12:34:56+0000",
+    "id": 3,
+    "text": "This is a second example tweet 2021!",
+    "user": {
+      "id": 9876543210,
+      "screen_name": "example_user",
+      "name": "Example User"
+    },
+    "retweet_count": 10,
+    "favorite_count": 20,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "example"
+        },
+        {
+          "text": "twitter"
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "another_user",
+          "name": "Another User",
+          "id": 123456789
+        }
+      ],
+      "urls": [
+        {
+          "url": "https://example.com",
+          "expanded_url": "https://example.com",
+          "display_url": "example.com"
+        }
+      ]
+    }
+  },
+  {
+    "created_at": "2020-01-03T12:34:56+0000",
+    "id": 4,
+    "text": "This is an example tweet 2020!",
+    "user": {
+      "id": 9876543210,
+      "screen_name": "example_user",
+      "name": "Example User"
+    },
+    "retweet_count": 10,
+    "favorite_count": 20,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "example"
+        },
+        {
+          "text": "twitter"
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "another_user",
+          "name": "Another User",
+          "id": 123456789
+        }
+      ],
+      "urls": [
+        {
+          "url": "https://example.com",
+          "expanded_url": "https://example.com",
+          "display_url": "example.com"
+        }
+      ]
+    }
+  },
+  {
+    "created_at": "2013-01-03T12:34:56+0000",
+    "id": 5,
+    "text": "This is an example tweet 2013!",
+    "user": {
+      "id": 9876543210,
+      "screen_name": "example_user",
+      "name": "Example User"
+    },
+    "retweet_count": 10,
+    "favorite_count": 20,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "example"
+        },
+        {
+          "text": "twitter"
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "another_user",
+          "name": "Another User",
+          "id": 123456789
+        }
+      ],
+      "urls": [
+        {
+          "url": "https://example.com",
+          "expanded_url": "https://example.com",
+          "display_url": "example.com"
+        }
+      ]
+    }
+  }
+]
