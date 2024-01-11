@@ -1,14 +1,15 @@
 import { Route } from "@react-navigation/native";
 import { Text, StyleSheet, View, ScrollView } from "react-native";
-import data from "../mocks/tweets.json";
+import dayjs from "dayjs";
+import { formatDate } from "../utils/formatDate";
 
 const Pages = ({
   route,
 }: {
-  route: Route<string, { year: string; ids: number[]; color: string }>;
+  route: Route<string, { year: string; content: any[]; color: string }>;
 }) => {
-  const tweets = data.filter((item) => route.params.ids.includes(item.id));
-
+  const tweets = route.params.content;
+  console.log(route.params.content);
   return (
     <ScrollView style={styles.containerr}>
       <Text style={[styles.year, { backgroundColor: route.params.color }]}>
@@ -24,14 +25,13 @@ const Pages = ({
                   { backgroundColor: `${route.params.color}80` },
                 ]}
               >
-                {new Date(tweet.created_at).toLocaleTimeString()}
+                {formatDate(tweet.created_at).fullDate}
               </Text>
             </View>
-            <Text style={styles.tweet}>{tweet.text}</Text>
+            <Text style={styles.tweet}>{tweet.full_text}</Text>
           </View>
         ))}
       </View>
-      <View style={styles.timeline}></View>
     </ScrollView>
   );
 };

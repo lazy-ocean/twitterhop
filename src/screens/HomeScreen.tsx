@@ -2,35 +2,29 @@ import React from "react";
 import { StyleSheet, Button, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { NavigationProp } from "@react-navigation/native";
+import { searchTweets } from "../utils/tweetSearch";
 
 const COLORS = ["#F2023E", "#FF680A", "#21A8FD", "#124DE2", "#759438"];
 
 const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
-  console.log(COLORS[Math.floor(Math.random() * 5)]);
+  const tweets = searchTweets();
   return (
     <View style={styles.container}>
       <Text>Twitterhop</Text>
       <Text>{new Date().toLocaleDateString()}</Text>
-      <Button
-        title="2022"
-        onPress={() =>
-          navigation.navigate("Pages", {
-            year: "2022",
-            ids: [1],
-            color: COLORS[Math.floor(Math.random() * 5)],
-          })
-        }
-      />
-      <Button
-        title="2021"
-        onPress={() =>
-          navigation.navigate("Pages", {
-            year: "2021",
-            ids: [2, 3],
-            color: COLORS[Math.floor(Math.random() * 5)],
-          })
-        }
-      />
+      {Object.keys(tweets).map((year) => (
+        <Button
+          key={year}
+          title={year}
+          onPress={() =>
+            navigation.navigate("Pages", {
+              year,
+              content: tweets[year],
+              color: COLORS[Math.floor(Math.random() * 5)],
+            })
+          }
+        />
+      ))}
       <StatusBar style="auto" />
     </View>
   );
