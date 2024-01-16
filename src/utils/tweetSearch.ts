@@ -1,10 +1,10 @@
-import data from "../mocks/tweets1.json";
+/* import data from "../mocks/tweets1.json"; */
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import { formatDate } from "./formatDate";
 import { Tweet } from "../interfaces";
 
-export const searchTweets = () => {
+export const searchTweets = (data: { tweet: Tweet }[]) => {
   const todayDay = dayjs().date();
   const todayMonth = dayjs().month();
   dayjs.extend(customParseFormat);

@@ -1,13 +1,15 @@
 import { Route } from "@react-navigation/native";
 import { Text, StyleSheet, View, ScrollView } from "react-native";
-import { formatDate } from "../utils/formatDate";
-import { TweetContent } from "../components/Tweet/TweetContent";
 import Tweet from "../components/Tweet/Tweet";
+import { Tweet as TweetInterface } from "../interfaces";
 
 const Tweets = ({
   route,
 }: {
-  route: Route<string, { year: string; content: any[]; color: string }>;
+  route: Route<
+    string,
+    { year: string; content: TweetInterface[]; color: string }
+  >;
 }) => {
   const tweets = [...route.params.content].reverse();
 

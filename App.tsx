@@ -8,8 +8,19 @@ import {
   Inter_200ExtraLight,
   Inter_300Light,
 } from "@expo-google-fonts/inter";
+import { FileProvider } from "./src/utils/contexts/FileContext";
+import { NavigatorScreenParams } from "@react-navigation/native";
 
-const Stack = createNativeStackNavigator();
+type Stack = {
+  Tweets: NavigatorScreenParams<{
+    year: number;
+    content: any;
+    color: string;
+  }>;
+  Home: undefined;
+};
+
+const Stack = createNativeStackNavigator<Stack>();
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -22,15 +33,17 @@ export default function App() {
     return null;
   }
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: "Twitterhop" }}
-        />
-        <Stack.Screen name="Tweets" component={Tweets} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <FileProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ title: "Twitterhop" }}
+          />
+          <Stack.Screen name="Tweets" component={Tweets} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </FileProvider>
   );
 }

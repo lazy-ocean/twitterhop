@@ -1,10 +1,9 @@
-import { Route } from "@react-navigation/native";
-import { Text, StyleSheet, View, ScrollView } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 import { TweetContent } from "./TweetContent";
 import { formatDate } from "../../utils/formatDate";
-import { Tweet } from "../../interfaces";
+import { Tweet as TweetInterface } from "../../interfaces";
 
-const Tweet = ({ tweet, color }: { tweet: Tweet; color: string }) => {
+const Tweet = ({ tweet, color }: { tweet: TweetInterface; color: string }) => {
   return (
     <View key={tweet.id}>
       <Text style={[styles.date, { backgroundColor: `${color}80` }]}>

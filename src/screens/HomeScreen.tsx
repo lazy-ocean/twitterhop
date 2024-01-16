@@ -1,31 +1,35 @@
 import React from "react";
 import { StyleSheet, Button, Text, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
 import { NavigationProp } from "@react-navigation/native";
-import { searchTweets } from "../utils/tweetSearch";
+import { useFile } from "../utils/contexts/FileContext";
+import FilePicker from "../components/FilePicker";
 
 const COLORS = ["#F2023E", "#FF680A", "#21A8FD", "#124DE2", "#759438"];
 
 const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
-  const tweets = searchTweets();
+  const { data } = useFile();
+
   return (
     <View style={styles.container}>
       <Text>Twitterhop</Text>
       <Text>{new Date().toLocaleDateString()}</Text>
-      {Object.keys(tweets).map((year) => (
-        <Button
-          key={year}
-          title={year}
-          onPress={() =>
-            navigation.navigate("Tweets", {
-              year,
-              content: tweets[year],
-              color: COLORS[Math.floor(Math.random() * 5)],
-            })
-          }
-        />
-      ))}
-      <StatusBar style="auto" />
+      {data ? (
+        Object.keys(data).map((year) => (
+          <Button
+            key={year}
+            title={year}
+            onPress={() =>
+              navigation.navigate("Tweets", {
+                year,
+                content: data[year],
+                color: COLORS[Math.floor(Math.random() * 5)],
+              })
+            }
+          />
+        ))
+      ) : (
+        <FilePicker />
+      )}
     </View>
   );
 };
