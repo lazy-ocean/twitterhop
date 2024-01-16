@@ -1,9 +1,7 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./src/screens/HomeScreen";
-import Pages from "./src/screens/Pages";
+import Tweets from "./src/screens/Tweets";
 import {
   useFonts,
   Inter_600SemiBold,
@@ -31,7 +29,7 @@ export default function App() {
           component={HomeScreen}
           options={{ title: "Twitterhop" }}
         />
-        <Stack.Screen name="Pages" component={Pages} />
+        <Stack.Screen name="Tweets" component={Tweets} />
       </Stack.Navigator>
     </NavigationContainer>
   );

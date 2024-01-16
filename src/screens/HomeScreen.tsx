@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
           key={year}
           title={year}
           onPress={() =>
-            navigation.navigate("Pages", {
+            navigation.navigate("Tweets", {
               year,
               content: tweets[year],
               color: COLORS[Math.floor(Math.random() * 5)],

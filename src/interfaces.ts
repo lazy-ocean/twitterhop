@@ -5,33 +5,36 @@ interface Url {
   indices: ["13", "36"];
 }
 
+export interface Entities {
+  hashtags: any[];
+  symbols: any[];
+  urls: Url[];
+  user_mentions: any[];
+  media: [
+    {
+      expanded_url: string;
+      indices: number[];
+      url: string;
+      media_url: string;
+      id_str: string;
+      id: string;
+      media_url_https: string;
+      type: string;
+      display_url: string;
+      sizes: {
+        small: {
+          w: number;
+          h: number;
+        };
+      };
+    }
+  ];
+}
+
 export interface Tweet {
   created_at: string;
-  entities: {
-    hashtags: any[];
-    symbols: any[];
-    urls: Url[];
-    user_mentions: any[];
-    media: [
-      {
-        expanded_url: string;
-        indices: number[];
-        url: string;
-        media_url: string;
-        id_str: string;
-        id: string;
-        media_url_https: string;
-        type: string;
-        display_url: string;
-        sizes: {
-          small: {
-            w: number;
-            h: number;
-          };
-        };
-      }
-    ];
-  };
+  extended_entities: Entities;
+  entities: Entities;
   favorite_count: string;
   favorited: boolean;
   full_text: string;
