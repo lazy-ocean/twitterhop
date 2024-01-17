@@ -54,13 +54,13 @@ export const TweetContent = ({ tweet }: { tweet: Tweet }) => {
 const styles = StyleSheet.create({
   tweet: {
     fontSize: 20,
-    fontFamily: "Inter_300Light",
+    fontFamily: "PlusJakartaSans_200ExtraLight",
     lineHeight: 25,
   },
   link: {
     color: "#0000eb",
   },
   mention: {
-    fontFamily: "Inter_600SemiBold",
+    fontFamily: "PlusJakartaSans_600SemiBold",
   },
 });

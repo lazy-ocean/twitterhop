@@ -8,6 +8,11 @@ import {
   Inter_200ExtraLight,
   Inter_300Light,
 } from "@expo-google-fonts/inter";
+import {
+  PlusJakartaSans_500Medium,
+  PlusJakartaSans_600SemiBold,
+  PlusJakartaSans_200ExtraLight,
+} from "@expo-google-fonts/plus-jakarta-sans";
 import { FileProvider } from "./src/utils/contexts/FileContext";
 import { NavigatorScreenParams } from "@react-navigation/native";
 
@@ -27,6 +32,9 @@ export default function App() {
     Inter_600SemiBold,
     Inter_200ExtraLight,
     Inter_300Light,
+    PlusJakartaSans_500Medium,
+    PlusJakartaSans_600SemiBold,
+    PlusJakartaSans_200ExtraLight,
   });
 
   if (!fontsLoaded) {

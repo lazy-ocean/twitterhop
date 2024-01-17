@@ -3,31 +3,33 @@ import { TweetContent } from "./TweetContent";
 import { formatDate } from "../../utils/formatDate";
 import { Tweet as TweetInterface } from "../../interfaces";
 
-const Tweet = ({ tweet, color }: { tweet: TweetInterface; color: string }) => {
+const Tweet = ({ tweet }: { tweet: TweetInterface }) => {
   return (
-    <View key={tweet.id}>
-      <Text style={[styles.date, { backgroundColor: `${color}80` }]}>
-        {formatDate(tweet.created_at).fullDate}
-      </Text>
-      <View style={styles.tweetWrapper} key={tweet.id}>
-        <TweetContent tweet={tweet} />
-      </View>
+    <View key={tweet.id} style={styles.tweet}>
+      <Text style={styles.date}>{formatDate(tweet.created_at).time}</Text>
+      <TweetContent tweet={tweet} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  tweet: {
+    borderRadius: 20,
+    backgroundColor: "#f7f7f8",
+    padding: 20,
+    gap: 10,
+  },
   tweetWrapper: {
     backgroundColor: "#f7f7f8",
     display: "flex",
     flexDirection: "column",
     padding: 20,
     gap: 20,
+    borderRadius: 20,
   },
   date: {
-    fontSize: 18,
-    color: "#000",
-    padding: 5,
+    fontSize: 14,
+    fontFamily: "PlusJakartaSans_200ExtraLight",
   },
 });
 
