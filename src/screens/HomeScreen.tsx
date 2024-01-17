@@ -14,19 +14,14 @@ const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
       <Text>Twitterhop</Text>
       <Text>{new Date().toLocaleDateString()}</Text>
       {data ? (
-        Object.keys(data).map((year) => (
-          <Button
-            key={year}
-            title={year}
-            onPress={() =>
-              navigation.navigate("Tweets", {
-                year,
-                content: data[year],
-                color: COLORS[Math.floor(Math.random() * 5)],
-              })
-            }
-          />
-        ))
+        <Button
+          title={"go to tweets"}
+          onPress={() =>
+            navigation.navigate("Tweets", {
+              tweets: data,
+            })
+          }
+        />
       ) : (
         <FilePicker />
       )}

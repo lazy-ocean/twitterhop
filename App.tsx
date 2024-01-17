@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./src/screens/HomeScreen";
-import Tweets from "./src/screens/Tweets";
+import { TweetsPager } from "./src/screens/Tweets";
 import {
   useFonts,
   Inter_600SemiBold,
@@ -41,7 +41,7 @@ export default function App() {
             component={HomeScreen}
             options={{ title: "Twitterhop" }}
           />
-          <Stack.Screen name="Tweets" component={Tweets} />
+          <Stack.Screen name="Tweets" component={TweetsPager} />
         </Stack.Navigator>
       </NavigationContainer>
     </FileProvider>

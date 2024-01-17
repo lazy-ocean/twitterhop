@@ -1,6 +1,5 @@
 import { Entities } from "../../interfaces";
 import { StyleSheet, View } from "react-native";
-
 import { Image } from "expo-image";
 
 export const Media = ({ data }: { data: Entities }) => {
@@ -26,12 +25,11 @@ export const Media = ({ data }: { data: Entities }) => {
 
 const styles = StyleSheet.create({
   imageCont: {
-    flex: 1,
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
   },
   image: {
-    flex: 1,
     width: "100%",
     height: "auto",
   },
