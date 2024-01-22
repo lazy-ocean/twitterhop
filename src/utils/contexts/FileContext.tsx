@@ -32,16 +32,18 @@ export const useFile = () => {
 export const FileProvider = ({ children }: { children: ReactElement }) => {
   const [fileUri, setFileUri] = useState<string | null>(null);
   const [data, setData] = useState<{ [key: number]: Tweet[] } | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
       try {
+        setIsLoading(true);
         const value = await AsyncStorage.getItem(DATA_KEY);
-        console.log({ value });
         if (value !== null) {
           readFile(value);
         }
       } catch (e) {
+        setIsLoading(false);
         console.log(e);
       }
     };
@@ -63,8 +65,10 @@ export const FileProvider = ({ children }: { children: ReactElement }) => {
         const data = JSON.parse(jsonContent);
         const tweets = searchTweets(data);
         setData(tweets);
+        setIsLoading(false);
       }
     } catch (error) {
+      setIsLoading(false);
       console.error(error);
     }
   };
@@ -94,7 +98,7 @@ export const FileProvider = ({ children }: { children: ReactElement }) => {
   };
 
   return (
-    <FileContext.Provider value={{ fileUri, selectFile, data }}>
+    <FileContext.Provider value={{ fileUri, selectFile, data, isLoading }}>
       {children}
     </FileContext.Provider>
   );

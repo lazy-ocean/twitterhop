@@ -1,30 +1,45 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { StyleSheet, Button, Text, View, Pressable } from "react-native";
 import { NavigationProp } from "@react-navigation/native";
 import { useFile } from "../utils/contexts/FileContext";
 import FilePicker from "../components/FilePicker";
+import * as SplashScreen from "expo-splash-screen";
+
+SplashScreen.preventAutoHideAsync();
 
 const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
-  const { data } = useFile();
+  const { data, isLoading } = useFile();
+
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  useEffect(() => {
+    console.log({ isLoading });
+    if (!isLoading) {
+      setAppIsReady(true);
+      SplashScreen.hideAsync();
+    }
+  }, [isLoading]);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Twitterhop</Text>
-      <Text style={styles.date}>{new Date().toLocaleDateString()}</Text>
-      {data ? (
-        <Pressable
-          style={styles.button}
-          onPress={() =>
-            navigation.navigate("Tweets", {
-              tweets: data,
-            })
-          }
-        >
-          <Text style={styles.label}>Let's go!</Text>
-        </Pressable>
-      ) : (
-        <FilePicker />
-      )}
+      <View style={styles.innerContainer}>
+        <Text style={styles.header}>Twitterhop</Text>
+        <Text style={styles.date}>{new Date().toLocaleDateString()}</Text>
+        {data && !isLoading ? (
+          <Pressable
+            style={styles.button}
+            onPress={() =>
+              navigation.navigate("Tweets", {
+                tweets: data,
+              })
+            }
+          >
+            <Text style={styles.label}>Let's go!</Text>
+          </Pressable>
+        ) : (
+          <FilePicker />
+        )}
+      </View>
     </View>
   );
 };
@@ -32,13 +47,15 @@ const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
 const styles = StyleSheet.create({
   header: {
     fontFamily: "PlusJakartaSans_500Medium",
-    fontSize: 40,
+    fontSize: 42,
   },
   button: {
     paddingHorizontal: 20,
     paddingVertical: 10,
-    backgroundColor: "black",
+    backgroundColor: "#db4d2f",
     borderRadius: 15,
+    borderColor: "#161411",
+    borderWidth: 3,
   },
   label: {
     color: "white",
@@ -51,10 +68,19 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "#face3e",
+    backgroundColor: "#9fc875",
     alignItems: "center",
     justifyContent: "center",
-    gap: 10,
+  },
+  innerContainer: {
+    backgroundColor: "#fbfdfc",
+    borderColor: "#161411",
+    borderWidth: 3,
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 20,
+    padding: 30,
   },
 });
 

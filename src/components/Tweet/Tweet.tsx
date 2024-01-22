@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#f7f7f8",
     padding: 20,
     gap: 10,
+    borderColor: "#161411",
+    borderWidth: 2,
   },
   tweetWrapper: {
     backgroundColor: "#f7f7f8",
