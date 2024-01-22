@@ -2,6 +2,7 @@ import { Tweet } from "../../interfaces";
 import { Text, StyleSheet, View } from "react-native";
 import { A } from "@expo/html-elements";
 import { Media } from "./Media";
+import React from "react";
 
 export const TweetContent = ({ tweet }: { tweet: Tweet }) => {
   const { full_text, entities, extended_entities } = tweet;
@@ -27,19 +28,23 @@ export const TweetContent = ({ tweet }: { tweet: Tweet }) => {
           );
           if (existing) {
             return (
-              <>
+              <React.Fragment key={index}>
                 {existing.expanded_url.includes("twitter.com") && (
                   <Text>(quote tweet)</Text>
                 )}
                 <A key={index} href={part} style={styles.link}>
                   {existing.expanded_url}
                 </A>
-              </>
+              </React.Fragment>
             );
           } else if (entities.media && part.startsWith("http")) {
             return "";
           } else if (entities.user_mentions && part.startsWith("@")) {
-            return <Text style={styles.mention}>{part}</Text>;
+            return (
+              <Text key={index} style={styles.mention}>
+                {part}
+              </Text>
+            );
           }
           return part;
         })}

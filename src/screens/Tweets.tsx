@@ -17,7 +17,7 @@ const FONT_COLORS = [
   "#52225e",
   "#52225e",
   "#1c471f",
-  "#4e200b", //
+  "#4e200b",
   "#582614",
   "#4f1316",
 ];
@@ -42,7 +42,7 @@ const Tweets = ({
           <Text style={[styles.year, { color: fontColor }]}>{year}</Text>
           <View style={styles.tweetsWrapper}>
             {tweets.map((tweet) => (
-              <Tweet tweet={tweet} />
+              <Tweet tweet={tweet} key={tweet.id} />
             ))}
           </View>
         </View>
