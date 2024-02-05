@@ -1,0 +1,279 @@
+[
+  {
+    "tweet": {
+      "edit_info": {
+        "initial": {
+          "editTweetIds": ["1742869934558814348"],
+          "editableUntil": "2024-01-04T12:25:48.000Z",
+          "editsRemaining": "5",
+          "isEditEligible": true
+        }
+      },
+      "retweeted": false,
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "entities": {
+        "user_mentions": [],
+        "urls": [],
+        "symbols": [],
+        "media": [
+          {
+            "expanded_url": "https://twitter.com/lazy_ocean/status/1742869934558814348/photo/1",
+            "indices": ["169", "192"],
+            "url": "https://t.co/6nrYHEuR7Z",
+            "media_url": "http://pbs.twimg.com/media/GC_qoVFWgAASxEz.jpg",
+            "id_str": "1742869559390928896",
+            "id": "1742869559390928896",
+            "media_url_https": "https://pbs.twimg.com/media/GC_qoVFWgAASxEz.jpg",
+            "sizes": {
+              "small": {
+                "w": "680",
+                "h": "533",
+                "resize": "fit"
+              },
+              "large": {
+                "w": "1206",
+                "h": "946",
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": "150",
+                "h": "150",
+                "resize": "crop"
+              },
+              "medium": {
+                "w": "1200",
+                "h": "941",
+                "resize": "fit"
+              }
+            },
+            "type": "photo",
+            "display_url": "pic.twitter.com/6nrYHEuR7Z"
+          }
+        ],
+        "hashtags": []
+      },
+      "display_text_range": ["0", "192"],
+      "favorite_count": "0",
+      "id_str": "1742869934558814348",
+      "truncated": false,
+      "retweet_count": "0",
+      "id": "1742869934558814348",
+      "possibly_sensitive": false,
+      "created_at": "Thu Jan 04 11:25:48 +0000 2024",
+      "favorited": false,
+      "full_text": "из jane eyre узнала о ныне устаревшем слове to sup, supped, i.e. to have supper, по аналогии с существующим dine =&gt; to have dinner. логично, но почему-то понравилось https://t.co/6nrYHEuR7Z",
+      "lang": "ru",
+      "extended_entities": {
+        "media": [
+          {
+            "expanded_url": "https://twitter.com/lazy_ocean/status/1742869934558814348/photo/1",
+            "indices": ["169", "192"],
+            "url": "https://t.co/6nrYHEuR7Z",
+            "media_url": "http://pbs.twimg.com/media/GC_qoVFWgAASxEz.jpg",
+            "id_str": "1742869559390928896",
+            "id": "1742869559390928896",
+            "media_url_https": "https://pbs.twimg.com/media/GC_qoVFWgAASxEz.jpg",
+            "sizes": {
+              "small": {
+                "w": "680",
+                "h": "533",
+                "resize": "fit"
+              },
+              "large": {
+                "w": "1206",
+                "h": "946",
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": "150",
+                "h": "150",
+                "resize": "crop"
+              },
+              "medium": {
+                "w": "1200",
+                "h": "941",
+                "resize": "fit"
+              }
+            },
+            "type": "photo",
+            "display_url": "pic.twitter.com/6nrYHEuR7Z"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tweet": {
+      "edit_info": {
+        "initial": {
+          "editTweetIds": ["1741882849114956242"],
+          "editableUntil": "2024-01-01T19:03:28.000Z",
+          "editsRemaining": "5",
+          "isEditEligible": false
+        }
+      },
+      "retweeted": false,
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "entities": {
+        "user_mentions": [],
+        "urls": [],
+        "symbols": [],
+        "media": [
+          {
+            "expanded_url": "https://twitter.com/lazy_ocean/status/1741882849114956242/photo/1",
+            "indices": ["0", "23"],
+            "url": "https://t.co/lf6s4Ns7pm",
+            "media_url": "http://pbs.twimg.com/media/GCxpLhCWgAEWk7o.jpg",
+            "id_str": "1741882802453250049",
+            "id": "1741882802453250049",
+            "media_url_https": "https://pbs.twimg.com/media/GCxpLhCWgAEWk7o.jpg",
+            "sizes": {
+              "small": {
+                "w": "680",
+                "h": "440",
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": "150",
+                "h": "150",
+                "resize": "crop"
+              },
+              "medium": {
+                "w": "1200",
+                "h": "776",
+                "resize": "fit"
+              },
+              "large": {
+                "w": "2048",
+                "h": "1325",
+                "resize": "fit"
+              }
+            },
+            "type": "photo",
+            "display_url": "pic.twitter.com/lf6s4Ns7pm"
+          }
+        ],
+        "hashtags": []
+      },
+      "display_text_range": ["0", "23"],
+      "favorite_count": "0",
+      "in_reply_to_status_id_str": "1741881963357544641",
+      "id_str": "1741882849114956242",
+      "in_reply_to_user_id": "153780164",
+      "truncated": false,
+      "retweet_count": "0",
+      "id": "1741882849114956242",
+      "in_reply_to_status_id": "1741881963357544641",
+      "possibly_sensitive": false,
+      "created_at": "Mon Jan 01 18:03:28 +0000 2024",
+      "favorited": false,
+      "full_text": "https://t.co/lf6s4Ns7pm",
+      "lang": "zxx",
+      "in_reply_to_screen_name": "lazy_ocean",
+      "in_reply_to_user_id_str": "153780164",
+      "extended_entities": {
+        "media": [
+          {
+            "expanded_url": "https://twitter.com/lazy_ocean/status/1741882849114956242/photo/1",
+            "indices": ["0", "23"],
+            "url": "https://t.co/lf6s4Ns7pm",
+            "media_url": "http://pbs.twimg.com/media/GCxpLhCWgAEWk7o.jpg",
+            "id_str": "1741882802453250049",
+            "id": "1741882802453250049",
+            "media_url_https": "https://pbs.twimg.com/media/GCxpLhCWgAEWk7o.jpg",
+            "sizes": {
+              "small": {
+                "w": "680",
+                "h": "440",
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": "150",
+                "h": "150",
+                "resize": "crop"
+              },
+              "medium": {
+                "w": "1200",
+                "h": "776",
+                "resize": "fit"
+              },
+              "large": {
+                "w": "2048",
+                "h": "1325",
+                "resize": "fit"
+              }
+            },
+            "type": "photo",
+            "display_url": "pic.twitter.com/lf6s4Ns7pm"
+          },
+          {
+            "expanded_url": "https://twitter.com/lazy_ocean/status/1741882849114956242/photo/1",
+            "indices": ["0", "23"],
+            "url": "https://t.co/lf6s4Ns7pm",
+            "media_url": "http://pbs.twimg.com/media/GCxpLhHWcAATEll.jpg",
+            "id_str": "1741882802474217472",
+            "id": "1741882802474217472",
+            "media_url_https": "https://pbs.twimg.com/media/GCxpLhHWcAATEll.jpg",
+            "sizes": {
+              "small": {
+                "w": "680",
+                "h": "440",
+                "resize": "fit"
+              },
+              "large": {
+                "w": "2048",
+                "h": "1325",
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": "150",
+                "h": "150",
+                "resize": "crop"
+              },
+              "medium": {
+                "w": "1200",
+                "h": "776",
+                "resize": "fit"
+              }
+            },
+            "type": "photo",
+            "display_url": "pic.twitter.com/lf6s4Ns7pm"
+          },
+          {
+            "expanded_url": "https://twitter.com/lazy_ocean/status/1741882849114956242/photo/1",
+            "indices": ["0", "23"],
+            "url": "https://t.co/lf6s4Ns7pm",
+            "media_url": "http://pbs.twimg.com/media/GCxpLhBXMAIvhAE.jpg",
+            "id_str": "1741882802449100802",
+            "id": "1741882802449100802",
+            "media_url_https": "https://pbs.twimg.com/media/GCxpLhBXMAIvhAE.jpg",
+            "sizes": {
+              "small": {
+                "w": "680",
+                "h": "440",
+                "resize": "fit"
+              },
+              "large": {
+                "w": "2048",
+                "h": "1325",
+                "resize": "fit"
+              },
+              "medium": {
+                "w": "1200",
+                "h": "776",
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": "150",
+                "h": "150",
+                "resize": "crop"
+              }
+            },
+            "type": "photo",
+            "display_url": "pic.twitter.com/lf6s4Ns7pm"
+          }
+        ]
+      }
+    }
+  }
+]

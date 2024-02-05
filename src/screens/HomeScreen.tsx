@@ -1,5 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { StyleSheet, Button, Text, View, Pressable } from "react-native";
+import {
+  StyleSheet,
+  Button,
+  Text,
+  View,
+  Pressable,
+  ImageBackground,
+} from "react-native";
 import { NavigationProp } from "@react-navigation/native";
 import { useFile } from "../utils/contexts/FileContext";
 import FilePicker from "../components/FilePicker";
@@ -13,7 +20,6 @@ const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
-    console.log({ isLoading });
     if (!isLoading) {
       setAppIsReady(true);
       SplashScreen.hideAsync();
@@ -22,64 +28,75 @@ const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.innerContainer}>
-        <Text style={styles.header}>Twitterhop</Text>
-        <Text style={styles.date}>{new Date().toLocaleDateString()}</Text>
-        {data && !isLoading ? (
-          <Pressable
-            style={styles.button}
-            onPress={() =>
-              navigation.navigate("Tweets", {
-                tweets: data,
-              })
-            }
-          >
-            <Text style={styles.label}>Let's go!</Text>
-          </Pressable>
-        ) : (
-          <FilePicker />
-        )}
-      </View>
+      <ImageBackground
+        source={require("../assets/bg.png")}
+        resizeMode="cover"
+        style={styles.bgImage}
+      >
+        <View style={styles.mainContainer}>
+          <View style={styles.introWrapper}>
+            <Text style={styles.date}>{new Date().toLocaleDateString()}</Text>
+            <Text style={styles.header}>Twitterhop</Text>
+            {data && !isLoading ? (
+              <Pressable
+                style={styles.button}
+                onPress={() =>
+                  navigation.navigate("Tweets", {
+                    tweets: data,
+                  })
+                }
+              >
+                <Text style={styles.label}>Let's go!</Text>
+              </Pressable>
+            ) : (
+              <FilePicker />
+            )}
+          </View>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  bgImage: { flex: 1, justifyContent: "center" },
+  container: {
+    flex: 1,
+  },
+  mainContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "flex-end",
+    paddingBottom: 30,
+  },
   header: {
-    fontFamily: "PlusJakartaSans_500Medium",
     fontSize: 42,
+    fontFamily: "FugazOne_400Regular",
   },
   button: {
     paddingHorizontal: 20,
     paddingVertical: 10,
-    backgroundColor: "#db4d2f",
-    borderRadius: 15,
+    backgroundColor: "#161411",
+    borderRadius: 30,
     borderColor: "#161411",
     borderWidth: 3,
+    width: "100%",
   },
   label: {
     color: "white",
     fontSize: 20,
     textAlign: "center",
+    fontFamily: "Raleway_500Medium",
   },
   date: {
-    fontFamily: "PlusJakartaSans_200ExtraLight",
     fontSize: 20,
+    fontFamily: "Raleway_500Medium",
   },
-  container: {
-    flex: 1,
-    backgroundColor: "#9fc875",
+  introWrapper: {
     alignItems: "center",
     justifyContent: "center",
-  },
-  innerContainer: {
-    backgroundColor: "#fbfdfc",
-    borderColor: "#161411",
-    borderWidth: 3,
-    borderRadius: 15,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 20,
+    gap: 10,
+    width: "100%",
     padding: 30,
   },
 });

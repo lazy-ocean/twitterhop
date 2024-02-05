@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 40,
     color: "#fff",
-    fontFamily: "PlusJakartaSans_500Medium",
+    fontFamily: "FugazOne_400Regular",
     marginBottom: 20,
   },
 });

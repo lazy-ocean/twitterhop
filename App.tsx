@@ -4,15 +4,12 @@ import HomeScreen from "./src/screens/HomeScreen";
 import { TweetsPager } from "./src/screens/Tweets";
 import {
   useFonts,
-  Inter_600SemiBold,
-  Inter_200ExtraLight,
-  Inter_300Light,
-} from "@expo-google-fonts/inter";
-import {
-  PlusJakartaSans_500Medium,
-  PlusJakartaSans_600SemiBold,
-  PlusJakartaSans_200ExtraLight,
-} from "@expo-google-fonts/plus-jakarta-sans";
+  Raleway_300Light,
+  Raleway_500Medium,
+  Raleway_600SemiBold,
+} from "@expo-google-fonts/raleway";
+import { DaysOne_400Regular } from "@expo-google-fonts/days-one";
+import { FugazOne_400Regular } from "@expo-google-fonts/fugaz-one";
 import { FileProvider } from "./src/utils/contexts/FileContext";
 import { NavigatorScreenParams } from "@react-navigation/native";
 
@@ -29,12 +26,11 @@ const Stack = createNativeStackNavigator<Stack>();
 
 export default function App() {
   let [fontsLoaded] = useFonts({
-    Inter_600SemiBold,
-    Inter_200ExtraLight,
-    Inter_300Light,
-    PlusJakartaSans_500Medium,
-    PlusJakartaSans_600SemiBold,
-    PlusJakartaSans_200ExtraLight,
+    Raleway_300Light,
+    Raleway_500Medium,
+    Raleway_600SemiBold,
+    DaysOne_400Regular,
+    FugazOne_400Regular,
   });
 
   if (!fontsLoaded) {
