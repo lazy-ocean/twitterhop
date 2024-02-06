@@ -8,7 +8,6 @@ import {
   Raleway_500Medium,
   Raleway_600SemiBold,
 } from "@expo-google-fonts/raleway";
-import { DaysOne_400Regular } from "@expo-google-fonts/days-one";
 import { FugazOne_400Regular } from "@expo-google-fonts/fugaz-one";
 import { FileProvider } from "./src/utils/contexts/FileContext";
 import { NavigatorScreenParams } from "@react-navigation/native";
@@ -29,7 +28,6 @@ export default function App() {
     Raleway_300Light,
     Raleway_500Medium,
     Raleway_600SemiBold,
-    DaysOne_400Regular,
     FugazOne_400Regular,
   });
 

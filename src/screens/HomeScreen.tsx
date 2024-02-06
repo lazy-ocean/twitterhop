@@ -29,7 +29,7 @@ const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../assets/bg.png")}
+        source={require("../assets/splash.png")}
         resizeMode="cover"
         style={styles.bgImage}
       >
