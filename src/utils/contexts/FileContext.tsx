@@ -19,6 +19,7 @@ export interface FileContextType {
   fileUri: string | null;
   selectFile: () => void;
   data: { [key: number]: Tweet[] } | null;
+  isLoading: boolean;
 }
 
 export const useFile = () => {
@@ -39,8 +40,11 @@ export const FileProvider = ({ children }: { children: ReactElement }) => {
       try {
         setIsLoading(true);
         const value = await AsyncStorage.getItem(DATA_KEY);
+
         if (value !== null) {
           readFile(value);
+        } else {
+          setIsLoading(false);
         }
       } catch (e) {
         setIsLoading(false);

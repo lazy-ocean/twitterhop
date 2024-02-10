@@ -54,24 +54,26 @@ const Tweets = ({
 export const TweetsPager = ({
   route,
 }: {
-  route: Route<string, { tweets: string }>;
+  route?: Route<string, { tweets: { [key: string]: TweetInterface[] } }>;
 }) => {
   return (
-    <PagerView initialPage={0} style={styles.pagerView}>
-      {Object.keys(route.params.tweets).map((year) => {
-        const color = Math.floor(Math.random() * 6);
+    route && (
+      <PagerView initialPage={0} style={styles.pagerView}>
+        {Object.keys(route.params.tweets).map((year: string) => {
+          const color = Math.floor(Math.random() * 6);
 
-        return (
-          <Tweets
-            year={year}
-            content={route.params.tweets[year]}
-            color={COLORS[color]}
-            key={year}
-            fontColor={FONT_COLORS[color]}
-          />
-        );
-      })}
-    </PagerView>
+          return (
+            <Tweets
+              year={year}
+              content={route.params.tweets[year]}
+              color={COLORS[color]}
+              key={year}
+              fontColor={FONT_COLORS[color]}
+            />
+          );
+        })}
+      </PagerView>
+    )
   );
 };
 

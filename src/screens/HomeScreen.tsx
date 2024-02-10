@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
-  Button,
   Text,
   View,
   Pressable,
@@ -11,10 +10,11 @@ import { NavigationProp } from "@react-navigation/native";
 import { useFile } from "../utils/contexts/FileContext";
 import FilePicker from "../components/FilePicker";
 import * as SplashScreen from "expo-splash-screen";
+import { Stack } from "../../App";
 
 SplashScreen.preventAutoHideAsync();
 
-const HomeScreen = ({ navigation }: { navigation: NavigationProp<string> }) => {
+const HomeScreen = ({ navigation }: { navigation: NavigationProp<Stack> }) => {
   const { data, isLoading } = useFile();
 
   const [appIsReady, setAppIsReady] = useState(false);

@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "twitterhop",
+    "name": "Twitterhop",
+    "displayName": "Twitterhop",
     "slug": "twitterhop",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +14,8 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lazyocean.twitterhop"
     },
     "android": {
       "adaptiveIcon": {
@@ -23,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a088ad11-66d9-4f35-884d-bd2c3df542dc"
+      }
+    },
+    "owner": "lazy_ocean"
   }
 }

@@ -10,14 +10,12 @@ import {
 } from "@expo-google-fonts/raleway";
 import { FugazOne_400Regular } from "@expo-google-fonts/fugaz-one";
 import { FileProvider } from "./src/utils/contexts/FileContext";
-import { NavigatorScreenParams } from "@react-navigation/native";
+import { Tweet } from "./src/interfaces";
 
-type Stack = {
-  Tweets: NavigatorScreenParams<{
-    year: number;
-    content: any;
-    color: string;
-  }>;
+export type Stack = {
+  Tweets: {
+    tweets: { [key: string]: Tweet[] };
+  };
   Home: undefined;
 };
 
